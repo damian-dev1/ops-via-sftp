@@ -1,0 +1,24 @@
+sftp:
+  hostname: "sftp.example.com"
+  username: "your_sftp_username"
+  password: "your_sftp_password"
+  root_directories:
+    - "/data/incoming"
+    - "/another/sftp/path" # You can add more root directories here
+
+local:
+  directory: "./downloads" # Local directory to download files to
+  log_file: "./validation.log" # Path for the validation log file
+
+# File filtering criteria
+filter:
+  keyword: "target" # Keyword to look for in file names/paths
+  file_extension: ".csv" # File extension to filter by (e.g., .csv, .txt)
+
+# Email notification settings (optional)
+email:
+  sender: "your_email@example.com" # Sender email address
+  receiver: "receiver@example.com" # Recipient email address
+  smtp_server: "smtp.example.com" # SMTP server for sending emails
+  smtp_port: 465 # SMTP port (e.g., 587 for TLS, 465 for SSL)
+  password: "your_email_password" # Password for the sender email account
